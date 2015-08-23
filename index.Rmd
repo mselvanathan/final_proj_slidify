@@ -1,0 +1,47 @@
+---
+title       : Exploratory data analysis of some factor variables with wage
+subtitle    : Wage versus eduction, race and marital status
+author      : M Selvanathan
+job         : EA
+framework   : io2012 # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+````{r, echo=FALSE}
+library(ISLR)
+library(ggplot2)
+p + theme(axis.text.x = element_text(angle=30, hjust=1, vjust=1)) + ggtitle("Boxplot of wage versus education")
+```
+
+---
+
+```{r, echo=FALSE}
+library(ISLR)
+library(ggplot2)
+p <- ggplot(Wage, aes(x=race, y=wage, fill=race)) + geom_boxplot()
+p + theme(axis.text.x = element_text(angle=30, hjust=1, vjust=1)) + ggtitle("Slide 3 Boxplot of wage versus race")
+```
+
+---
+
+```{r, echo=FALSE}
+library(ISLR)
+library(ggplot2)
+p <- ggplot(Wage, aes(x=maritl, y=wage, fill=maritl)) + geom_boxplot()
+p + theme(axis.text.x = element_text(angle=30, hjust=1, vjust=1)) + ggtitle(" Slide 4: Boxplot of wage versus marital status")
+```
+
+---
+
+```{r, echo=FALSE}
+library(ISLR)
+library(ggplot2)
+
+p <- ggplot(Wage, aes(x=age, y=wage)) + geom_point() + stat_smooth(method=lm)
+p + theme(axis.text.x = element_text(angle=30, hjust=1, vjust=1)) + ggtitle("Slide 5: Increase of wage as one progresses through career.")
+
+```
