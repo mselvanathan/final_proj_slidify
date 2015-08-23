@@ -3,7 +3,7 @@ title       : Exploratory data analysis of some factor variables with wage
 subtitle    : Wage versus eduction, race and marital status
 author      : M Selvanathan
 job         : EA
-framework   : io2012 # {io2012, html5slides, shower, dzslides, ...}
+framework   : shower # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
@@ -14,6 +14,7 @@ knit        : slidify::knit2slides
 ````{r, echo=FALSE}
 library(ISLR)
 library(ggplot2)
+p <- ggplot(Wage, aes(x=education, y=wage, fill=education)) + geom_boxplot()
 p + theme(axis.text.x = element_text(angle=30, hjust=1, vjust=1)) + ggtitle("Boxplot of wage versus education")
 ```
 

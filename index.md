@@ -3,7 +3,7 @@ title       : Exploratory data analysis of some factor variables with wage
 subtitle    : Wage versus eduction, race and marital status
 author      : M Selvanathan
 job         : EA
-framework   : io2012 # {io2012, html5slides, shower, dzslides, ...}
+framework   : shower # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
